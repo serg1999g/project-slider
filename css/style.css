@@ -1,0 +1,168 @@
+.wrap {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* ---------------------- arrow --------------------- */
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+#arrow-left:hover,
+#arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#arrow-left {
+    left: 0;
+    z-index: 1;
+}
+
+#arrow-right {
+    right: 0;
+}
+
+
+
+/* ----------------- slider-content ----------------- */
+
+.slider-item img {
+
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+.slide-content .text {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: rgb(255, 165, 91);
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* ---------------------- button --------------------- */
+.wrap-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-button button {
+    width: 200px;
+    background-color: rgba(172, 218, 254, 0.7);
+    color: #ffce76;
+    font-size: 40px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.0);
+}
+
+.wrap-button button:hover {
+    background-color: rgba(172, 218, 254, 0.9);
+    transition: 0.5s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* ----------------------- dots ---------------------- */
+
+.slider-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.dot:not(:first-child) {
+    margin-left: 8px;
+}
+
+.dot-active {
+    background-color: black;
+}
+
+
+
+
+
+
+
+/* ------------------ animation-slides ---------------- */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* -------------------- media-queries ------------------ */
+@media (max-width: 575.98px) {
+    .slide-content .text {
+        font-size: 20px;
+    }
+
+    .wrap-button button {
+        font-size: 22px;
+        width: 136px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-content .text {
+        font-size: 36px;
+    }
+}
